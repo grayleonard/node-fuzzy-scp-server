@@ -6,7 +6,7 @@ var fs = require('fs');
 var dir = "/home/klang/torrents/";
 
 var get_torrents = function(query) {
-	var all_results = fs.readDirSync(dir);
+	var all_results = fs.readdirSync(dir);
 	var fuzzy_results = fuzzy(query, all_results);
 	console.log(fuzzy_results);
 	return fuzzy_results;
