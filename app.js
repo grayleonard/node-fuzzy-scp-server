@@ -14,7 +14,7 @@ var get_torrents = function(query) {
 
 app.get("/search/:query", function(req, res) {
 	console.log(req.params.query);
-	res.send(get_torrents(req.params.query);
+	res.send(get_torrents(req.params.query));
 });
 
 app.listen(8080);
