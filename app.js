@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var dir = "/home/klang/files";
 
-var get_torrents = function(query) {
+var get_directories = function(query) {
 	var all_results = fs.readdirSync(dir);
 	var fuzzy_results = fuzzy(query, all_results);
 	console.log(fuzzy_results);
@@ -14,7 +14,7 @@ var get_torrents = function(query) {
 
 app.get("/search/:query", function(req, res) {
 	console.log(req.params.query);
-	res.send(get_torrents(req.params.query));
+	res.send(get_directories(req.params.query));
 });
 
 app.listen(8080);
