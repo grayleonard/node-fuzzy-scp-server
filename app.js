@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-var dir = "/home/klang/torrents/";
+var dir = "/home/klang/files";
 
 var get_torrents = function(query) {
 	var all_results = fs.readdirSync(dir);
